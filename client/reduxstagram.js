@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { render } from 'react-dom'
 
+import Main from './components/Main'
+
 import './styles/style.styl'
 
-render(<p>Yo!</p>, document.getElementById('root'))
+render(<Main />, document.getElementById('root'))
