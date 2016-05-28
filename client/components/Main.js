@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component, PropTypes } from 'react'
 import { Link } from 'react-router'
 
 class Main extends Component {
@@ -8,9 +8,14 @@ class Main extends Component {
         <h1>
           <Link to='/'>Reduxstagram</Link>
         </h1>
+        {React.cloneElement(this.props.children, this.props)}
       </div>
     )
   }
+}
+
+Main.propTypes = {
+  children: PropTypes.any
 }
 
 export default Main
