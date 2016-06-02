@@ -16,6 +16,19 @@ class Photo extends Component {
             <span key={post.likes} className='likes-heart'>{post.likes}</span>
           </CSSTransitionGroup>
         </div>
+
+        <figcaption>
+          <p>{post.caption}</p>
+          <div className='control-buttons'>
+            <button className='likes'>&hearts; {post.likes}</button>
+          <Link className='button' to={`/view/${post.code}`}>
+              <span className='comment-count'>
+                <span className='speech-bubble'></span>
+                {comments[post.code] ? comments[post.code].length : 0}
+              </span>
+            </Link>
+          </div>
+        </figcaption>
       </figure>
     )
   }
