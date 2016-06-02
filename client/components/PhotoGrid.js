@@ -6,7 +6,7 @@ class PhotoGrid extends Component {
     return (
       <div className='photo-grid'>
         {this.props.posts.map((post, i) => {
-          return <Photo />
+          return <Photo {...this.props} />
         })}
       </div>
     )
